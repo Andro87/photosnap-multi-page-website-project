@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Solution URL ](https://github.com/Andro87/photosnap-multipage-website.git)
--   Live Site URL: [Live site URL ](https://photosnap-multipage-website-one.vercel.app/)
+-   Solution URL: [Solution URL ](https://github.com/Andro87/photosnap-multi-page-website-project.git)
+-   Live Site URL: [Live site URL ](https://photosnap-multi-page-website-project.vercel.app/)
 
 ## My process
 

@@ -18,26 +18,45 @@ export const Footer = () => {
                 <div className={styles.col_wrap_right}>
                     <Logo className={styles.logo} />
                     <div className={styles.socials_container}>
-                        <Link href="https://it-it.facebook.com/">
+                        <Link
+                            href="https://it-it.facebook.com/"
+                            aria-label="facebook"
+                        >
                             <Facebook />
                         </Link>
-                        <Link href="https://www.youtube.com/?gl=it&hl=it">
+                        <Link
+                            href="https://www.youtube.com/?gl=it&hl=it"
+                            aria-label="youTube"
+                        >
                             <YouTube />
                         </Link>
-                        <Link href="https://twitter.com/?lang=it">
+                        <Link
+                            href="https://twitter.com/?lang=it"
+                            aria-label="twitter"
+                        >
                             <Twitter />
                         </Link>
-                        <Link href="https://www.pinterest.com/">
+                        <Link
+                            href="https://www.pinterest.com/"
+                            aria-label="pinterest"
+                        >
                             <Pinterest />
                         </Link>
-                        <Link href="https://www.instagram.com/">
+                        <Link
+                            href="https://www.instagram.com/"
+                            aria-label="instagram"
+                        >
                             <Instagram />
                         </Link>
                     </div>
                     <div className={styles.links_container}>
                         <ul className={styles.links_list}>
                             <li className={styles.list_item}>
-                                <Link className={styles.list_link} href="/">
+                                <Link
+                                    className={styles.list_link}
+                                    href="/"
+                                    aria-label="home"
+                                >
                                     home
                                 </Link>
                             </li>

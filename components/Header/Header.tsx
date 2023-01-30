@@ -18,7 +18,7 @@ export const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.header_container}>
-                <Link href="/">
+                <Link href="/" aria-label="home logo">
                     <Logo />
                 </Link>
 
