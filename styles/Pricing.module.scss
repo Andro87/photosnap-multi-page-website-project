@@ -1,0 +1,18 @@
+@use "styles/helpers" as *;
+
+.price_containter {
+    padding-block: 64px;
+    @include breakpoint($medium) {
+        padding-block: 112px;
+    }
+    @include breakpoint($large) {
+        padding-top: 120px;
+        padding-bottom: 160px;
+    }
+}
+.price_containter_wrap {
+    @include container;
+    @include breakpoint($large) {
+        @include main-container;
+    }
+}

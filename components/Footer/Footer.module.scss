@@ -1,0 +1,138 @@
+@use "styles/helpers" as *;
+
+.footer {
+    background-color: var(--pure-black);
+    padding-block: 56px;
+    @include breakpoint($medium) {
+        padding-block: 64px;
+    }
+}
+
+.footer_container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+
+    @include breakpoint($medium) {
+        flex-direction: row;
+        align-items: initial;
+        justify-content: space-between;
+        gap: initial;
+    }
+    @include breakpoint($large) {
+        @include main-container;
+    }
+}
+
+.col_wrap_right {
+    text-align: center;
+    @include breakpoint($medium) {
+        text-align: initial;
+        display: flex;
+        flex-direction: column;
+    }
+    @include breakpoint($large) {
+        width: 50%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.logo {
+    path {
+        fill: var(--pure-white);
+    }
+}
+
+.socials_container {
+    margin-top: 32px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 15px;
+    svg {
+        path {
+            fill: var(--pure-white);
+            &:hover {
+                fill: var(--light-grey);
+            }
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    @include breakpoint($medium) {
+        order: 3;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    @include breakpoint($large) {
+        order: 2;
+        align-self: flex-end;
+        position: absolute;
+    }
+}
+.links_container {
+    @include breakpoint($medium) {
+        order: 2;
+        margin-top: 32px;
+        margin-bottom: 72px;
+    }
+    @include breakpoint($large) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.links_list {
+    @include breakpoint($medium) {
+        display: flex;
+        gap: 26px;
+    }
+    @include breakpoint($large) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.list_item {
+    margin-bottom: 20px;
+    @include breakpoint($medium) {
+        margin-bottom: 0;
+    }
+}
+
+.list_link {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    color: var(--pure-white);
+    text-transform: uppercase;
+    @include transition;
+    &:hover {
+        opacity: 0.3;
+    }
+}
+.col_wrap_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        color: var(--pure-white);
+        opacity: 0.5;
+        @include breakpoint($medium) {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint($medium) {
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+}

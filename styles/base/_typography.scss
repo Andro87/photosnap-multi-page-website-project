@@ -1,0 +1,51 @@
+@use "styles/helpers" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 3.33px;
+    text-transform: uppercase;
+    @include breakpoint($medium) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        letter-spacing: 4.16px;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 3.33px;
+    color: var(--pure-white);
+    text-transform: uppercase;
+    @include breakpoint($medium) {
+        font-size: 2.5rem;
+        line-height: 3rem;
+        letter-spacing: 4.16;
+        max-width: 400px;
+    }
+}
+
+h3 {
+    font-size: 1.125rem;
+    line-height: 1.5625rem;
+}
+
+h4 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 0.625rem;
+    line-height: 0.8125rem;
+    letter-spacing: 1.67px;
+}

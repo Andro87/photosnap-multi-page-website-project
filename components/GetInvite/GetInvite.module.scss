@@ -1,0 +1,30 @@
+@use "styles/helpers" as *;
+.container {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.btn_getInvite {
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include transition;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.light {
+    color: var(--pure-dark);
+}
+
+.dark {
+    color: var(--pure-white);
+}

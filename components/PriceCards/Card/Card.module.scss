@@ -1,0 +1,113 @@
+@use "styles/helpers" as *;
+
+.card {
+    text-align: center;
+    padding: 56px 20px 40px;
+    background-color: var(--very-light-grey);
+    color: var(--pure-black);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "header" "paragraph" "price" "btn";
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.5265rem;
+        text-transform: capitalize;
+        margin-bottom: 0;
+        grid-area: header;
+        @include breakpoint($medium) {
+            margin-top: 0;
+        }
+    }
+    p {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.5265rem;
+        opacity: 0.6;
+        grid-area: paragraph;
+    }
+    @include breakpoint($medium) {
+        text-align: initial;
+        padding: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header price" "paragraph price" "btn .";
+    }
+    @include breakpoint($large) {
+        text-align: center;
+        padding-top: 88px;
+        padding-bottom: 70px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "header" "paragraph" "price" "btn";
+    }
+}
+
+.pro_card {
+    color: var(--pure-white);
+    background-color: var(--pure-black);
+    position: relative;
+    &:before {
+        content: "";
+        background: var(--main-accent);
+        height: 6px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    @include breakpoint($large) {
+        transform: scale(1, 1.125);
+    }
+}
+
+.price_wrap {
+    grid-area: price;
+    p {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: 4.16px;
+        opacity: 1;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    span {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.5625rem;
+        opacity: 0.6;
+    }
+    @include breakpoint($medium) {
+        text-align: end;
+    }
+    @include breakpoint($medium) {
+        text-align: center;
+    }
+}
+.btn_plan {
+    text-transform: uppercase;
+    border: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1rem;
+    letter-spacing: 2px;
+    padding: 1em 2em;
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+    grid-area: btn;
+    @include transition;
+    @include breakpoint($medium) {
+        margin-top: 20px;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var(--light-grey);
+        color: var(--pure-black);
+    }
+}
+.pro_btn_plan {
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+}

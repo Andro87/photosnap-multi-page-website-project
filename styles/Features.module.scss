@@ -1,0 +1,29 @@
+@use "styles/helpers" as *;
+
+.section_tools {
+    padding-top: 64px;
+    padding-bottom: 90px;
+    @include breakpoint($medium) {
+        padding-block: 112px;
+    }
+    @include breakpoint($large) {
+        padding-block: 160px;
+    }
+}
+
+.tools_container {
+    @include container;
+    display: grid;
+    gap: 55px;
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 70px;
+    }
+    @include breakpoint($large) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 100px;
+        @include main-container;
+    }
+}

@@ -1,0 +1,53 @@
+@use "styles/helpers" as *;
+
+.table_plan_container {
+    padding-top: 64px;
+
+    h2 {
+        display: none;
+        @include breakpoint($medium) {
+            color: var(--pure-black);
+            display: block;
+
+            margin: auto;
+            text-align: center;
+        }
+    }
+    @include breakpoint($medium) {
+        padding-top: 112px;
+    }
+    @include breakpoint($large) {
+        padding-top: 160px;
+        max-width: 730px;
+        margin: auto;
+    }
+}
+
+.table_plan {
+    h4 {
+        text-transform: uppercase;
+    }
+
+    @include breakpoint($medium) {
+        margin-top: 64px;
+    }
+    @include breakpoint($large) {
+        margin-top: 56px;
+    }
+}
+.header {
+    border-bottom: 1px solid var(--pure-black);
+    @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: 1px solid var(--pure-black);
+    }
+}
+.option_wrap {
+    display: none;
+    @include breakpoint($medium) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}

@@ -1,0 +1,83 @@
+@use "styles/helpers" as *;
+
+.container {
+    @include breakpoint($medium) {
+        display: flex;
+        align-items: center;
+    }
+}
+.row {
+    @include breakpoint($medium) {
+        flex-direction: row;
+    }
+}
+.reverse {
+    @include breakpoint($medium) {
+        flex-direction: row-reverse;
+    }
+}
+
+.container_light {
+    background-color: var(--pure-white);
+    color: var(--pure-black);
+}
+
+.container_dark {
+    background-color: var(--pure-black);
+    color: var(--pure-white);
+}
+
+.container_info {
+    padding-block: 72px;
+    position: relative;
+    p {
+        font-size: 0.9375rem;
+        font-weight: 400;
+        line-height: 1.5625rem;
+    }
+    @include breakpoint($medium) {
+        padding-block: initial;
+        width: 40%;
+    }
+}
+
+.container_info_dark {
+    &:before {
+        content: "";
+        background: var(--main-accent);
+        height: 6px;
+        width: 128px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        @include breakpoint($medium) {
+            left: initial;
+            width: 6px;
+            height: 100%;
+        }
+    }
+}
+
+.info {
+    @include container;
+
+    h1 {
+        margin-top: 0;
+    }
+    p {
+        opacity: 0.6;
+    }
+
+    @include breakpoint($medium) {
+        max-width: 387px;
+        padding-inline: 54px;
+    }
+    @include breakpoint($large) {
+        padding-inline: initial;
+    }
+}
+.container_img {
+    @include breakpoint($medium) {
+        width: 60%;
+    }
+}

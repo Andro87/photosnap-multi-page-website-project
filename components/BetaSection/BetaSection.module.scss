@@ -1,0 +1,41 @@
+@use "styles/helpers" as *;
+
+.section_beta {
+    background-image: url("../../public/assets/shared/mobile/bg-beta.jpg");
+    background-size: cover;
+    padding-block: 64px;
+    position: relative;
+    &:before {
+        content: "";
+        background: var(--main-accent);
+        height: 6px;
+        width: 128px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        @include breakpoint($medium) {
+            left: initial;
+            width: 6px;
+            height: 100%;
+        }
+    }
+    @include breakpoint($medium) {
+        padding-block: 68px;
+        background-image: url("../../public/assets/shared/tablet/bg-beta.jpg");
+    }
+    @include breakpoint($large) {
+        background-image: url("../../public/assets/shared/desktop/bg-beta.jpg");
+    }
+}
+
+.beta_container {
+    @include container;
+    @include breakpoint($medium) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @include breakpoint($large) {
+        @include main-container;
+    }
+}

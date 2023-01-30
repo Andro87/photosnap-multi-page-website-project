@@ -1,0 +1,132 @@
+@use "styles/helpers" as *;
+
+.header {
+    background-color: var(--pure-white);
+    position: relative;
+}
+
+.header_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 28px;
+
+    @include container;
+    @include breakpoint($medium) {
+        justify-content: initial;
+        padding-block: 16px;
+    }
+    @include breakpoint($large) {
+        max-width: 80%;
+    }
+}
+
+.navigation {
+    display: none;
+    hr {
+        border: none;
+        height: 1px;
+        background-color: var(--pure-black);
+        opacity: 0.25;
+        margin-top: 0;
+        margin-bottom: 20px;
+        max-width: 90%;
+        @include breakpoint($medium) {
+            display: none;
+        }
+    }
+    @include breakpoint($medium) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-left: 40px;
+    }
+    @include breakpoint($large) {
+        margin-left: initial;
+        width: 70%;
+        margin-left: auto;
+    }
+}
+
+.navigation_mobile {
+    display: initial;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding-block: 32px;
+    background-color: var(--pure-white);
+}
+.nav_list {
+    @include container;
+
+    @include breakpoint($medium) {
+        display: flex;
+        gap: 35px;
+        max-width: initial;
+        margin: initial;
+    }
+}
+.nav_item {
+    text-align: center;
+    margin-bottom: 20px;
+    @include breakpoint($medium) {
+        text-align: initial;
+        margin-bottom: 0;
+    }
+}
+
+.nav_link {
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: 2.5px;
+    color: var(--pure-black);
+    @include transition;
+    @include breakpoint($medium) {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 2px;
+    }
+    &:hover {
+        opacity: 0.3;
+    }
+}
+
+.btn_menu {
+    background-color: transparent;
+    border: none;
+    @include breakpoint($medium) {
+        display: none;
+    }
+}
+
+.btn_invite {
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    letter-spacing: 2.5px;
+    text-align: center;
+    color: var(--pure-white);
+    background-color: var(--pure-black);
+    display: block;
+    padding: 1em;
+    @include container;
+    @include transition;
+    @include breakpoint($medium) {
+        display: initial;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        letter-spacing: 2px;
+        max-width: initial;
+        margin: initial;
+        margin-left: auto;
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: var(--light-grey);
+        color: var(--pure-black);
+    }
+}

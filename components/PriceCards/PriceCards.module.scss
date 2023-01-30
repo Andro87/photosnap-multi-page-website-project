@@ -1,0 +1,67 @@
+@use "styles/helpers" as *;
+
+.toggle_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.btn_check {
+    border: none;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    background-color: transparent;
+    @include transition;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.checked {
+    color: var(--pure-black);
+}
+.not_checked {
+    color: var(--pure-black);
+    opacity: 0.6;
+}
+.toggle {
+    width: 64px;
+    height: 32px;
+    background-color: var(--light-grey);
+    border-radius: 16px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    @include transition;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.toggle_yearly {
+    background-color: var(--pure-black);
+}
+
+.toggle_circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--pure-black);
+    @include transition;
+}
+.toggle_circle_yearly {
+    margin-left: auto;
+    background-color: var(--pure-white);
+}
+
+.cards_wrap {
+    display: grid;
+    gap: 24px;
+    margin-top: 40px;
+
+    @include breakpoint($large) {
+        margin-top: 80px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}

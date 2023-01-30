@@ -1,0 +1,33 @@
+@use "styles/helpers" as *;
+
+.section_stories {
+    display: grid;
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint($large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.section_tools {
+    padding-block: 80px;
+    @include breakpoint($medium) {
+        padding-block: 120px;
+    }
+}
+
+.tools_container {
+    @include container;
+    display: grid;
+    gap: 56px;
+    @include breakpoint($medium) {
+        justify-content: center;
+        gap: 80px;
+    }
+    @include breakpoint($large) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        @include main-container;
+    }
+}
